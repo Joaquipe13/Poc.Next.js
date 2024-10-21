@@ -35,7 +35,8 @@ export default async function handler(
       // Definir el camino donde se guardará la imagen
       const imagePath = path.join(
         process.cwd(),
-        "public", "images",
+        //"public", "images",
+        "tmp",
         imageFile.originalFilename || "uploaded_image.jpg"
       );
 

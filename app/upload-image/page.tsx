@@ -19,7 +19,11 @@ export default function MenuPage() {
   const handleUpload = async () => {
     if (image) {
       const formData = new FormData();
-      formData.append("image", image);
+      formData.append(
+        //"image",
+        "tmp",
+        image
+      );
 
       const response = await fetch("/api/upload", {
         method: "POST",
@@ -53,7 +57,11 @@ export default function MenuPage() {
         <div className="mt-4">
           <h2 className="text-center text-xl text-white font-medium mb-4"></h2>
           <Image
-            src={"images/" + imageUrl}
+            src={
+              //"images/"+
+              "tmp" + 
+              imageUrl
+            }
             alt="Uploaded"
             className="mx-auto rounded-md shadow-md"
           />
@@ -67,7 +75,7 @@ export default function MenuPage() {
 
       <input
         type="file"
-        accept="image/*"
+        accept="tmp/*"
         onChange={handleImageUpload}
         className="block w-full text-sm text-gray-300 border border-gray-500 rounded-lg cursor-pointer bg-gray-800 focus:outline-none focus:border-blue-500 p-2 mb-4"
       />
