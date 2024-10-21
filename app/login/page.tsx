@@ -31,7 +31,7 @@ export default function LoginPage() {
         const data = await response.json();
         setError(data.message);
       }
-    } catch (err) {
+    } catch {
       setError("Error al conectarse con el servidor");
     }
   };
