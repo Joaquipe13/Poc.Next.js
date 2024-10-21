@@ -26,7 +26,7 @@ export default function LoginPage() {
       if (response.ok) {
         const data = await response.json();
         setSuccess(data.message);
-        router.push("/menu");
+        router.push("/upload-image");
       } else {
         const data = await response.json();
         setError(data.message);
