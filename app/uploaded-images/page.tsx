@@ -32,7 +32,7 @@ const ImageGallery = () => {
               <Image
                 src={url}
                 alt={`Uploaded Image ${index}`}
-                className="w-72 h-72 object-cover rounded-md border border-gray-700 shadow-lg bg-gray-700"
+                className="w-72 h-72 object-cover rounded-md border border-gray-800 shadow-lg bg-gray-700"
               />
             </div>
           ))}
