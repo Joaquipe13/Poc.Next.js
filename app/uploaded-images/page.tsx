@@ -33,6 +33,8 @@ const ImageGallery = () => {
                 src={url}
                 alt={`Uploaded Image ${index}`}
                 className="w-72 h-72 object-cover rounded-md border border-gray-800 shadow-lg bg-gray-700"
+                width={300}
+                height={300}
               />
             </div>
           ))}

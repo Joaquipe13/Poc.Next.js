@@ -54,9 +54,11 @@ export default function MenuPage() {
         <div className="mt-4">
           <h2 className="text-center text-xl text-white font-medium mb-4"></h2>
           <Image
-            src={"images/" + imageUrl}
+            src={"/images/" + imageUrl}
             alt="Uploaded"
             className="mx-auto rounded-md shadow-md"
+            width={300}
+            height={300}
           />
         </div>
       )}
