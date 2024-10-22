@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image.js";
 
 const ImageGallery = () => {
   const [images, setImages] = useState<string[]>([]);
@@ -28,7 +29,7 @@ const ImageGallery = () => {
         <div className="grid grid-cols-3 gap-6">
           {images.map((url, index) => (
             <div key={index} className="flex justify-center items-center">
-              <img
+              <Image
                 src={url}
                 alt={`Uploaded Image ${index}`}
                 className="w-72 h-72 object-cover rounded-md border border-gray-700 shadow-lg bg-gray-700"
